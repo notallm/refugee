@@ -2,8 +2,6 @@ langchain
 langchain-community
 
 beautifulsoup4
-# pymupdf
-
 nltk
 
 langchain_experimental

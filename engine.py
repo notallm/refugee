@@ -5,9 +5,6 @@ from langchain.prompts.prompt import PromptTemplate
 from langchain_google_genai import ChatGoogleGenerativeAI, HarmCategory, HarmBlockThreshold
 from langchain_core.output_parsers import StrOutputParser
 
-import requests
-from bs4 import BeautifulSoup
-
 import re
 
 from scrape import clean_text
