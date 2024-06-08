@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>RefugeeGPT</title>
+    <link rel = "stylesheet" type = "text/css" href = "{{ url_for('static', filename = 'main.css') }}">
+    <link rel = "icon" type = "image/x-icon" href = "{{ url_for('static', filename = 'logo.png') }}">
+
+</head>
+<body>
+
+<nav>
+    <img src = "{{ url_for('static', filename = 'logo.png') }}">
+    <p>RefugeeGPT</p>
+</nav>
+
+<div class = "chat-container">
+    <div class = "info" id = "info">
+        <h1>RefugeeGPT</h1>
+        <p>
+            This chatbot is trained on over 40,000 unique pieces of data on United States Citizenship and Immigration laws,
+            regulations, and programs for refugees.
+        </p>
+        <p>
+            It is built to answer questions with detail and accuracy, 24/7/365. However, it is still important to consult
+            a USCIS officer, embassy or UNHCR official, or immigration lawyer before making any decisions.
+        </p>
+        <p>
+            Scroll down to learn more.
+        </p>
+    </div>
+    <div class = "chat-area" id = "chatArea"></div>
+    <div class = "input-container">
+        <input type = "text" id = "userInput" placeholder = "Ask a question...">
+        <button onclick = "sendChat()">Send</button>
+    </div>
+</div>
+
+<img src = "{{ url_for('static', filename = 'banner.jpg') }}" class = "banner">
+
+<div class = "content">
+    <h1>
+        Over 108,400,000 million people have been forced to flee their homes.
+        <a href = "https://www.unhcr.org/us/about-unhcr/who-we-are/figures-glance" class = "footnote">[source]</a>
+    </h1>
+    <p>
+        The refugee crisis is real. Unfortunately, it is often pushed as a regretted byproduct of war and violence.
+        Oftentimes, the harrowing conditions cause mass confusion. In times of distress, this simply creates a negative feedback loop.
+    </p>
+    <p>
+        RefugeeGPT attempts to alleviate this issue by offering a knowledgeable and helpful AI agent. It is trained on over 2,500 documents and
+        encompasses over 40,000 unique pieces of data taken from the United States Citizenship and Immigration <a href = "http://uscis.gov/">(USCIS)</a> and
+        United Nations High Commission for Refugees <a href = "http://unhcr.org/">(UNHCR)</a> websites, among others.
+    </p>
+    <p>
+        It aims to assist refugees and the general public with laws, regulations, and programs related to refugees and asylum in the United States.
+        It is built on Google's Gemini Pro, which enables it to reason through complexities and edge cases prevalent in US law and code.
+    </p>
+    <p>
+        In the near future, we hope to add data from other countries, offer support for different languages, methods to alter complexity and detail, and upgrade
+        to OpenAI's GPT 4 model.
+    </p>
+    <p>
+        We wish to build a world where refugees and displaced persons can attain immediate and quality help. Perhaps even automate the asylum process with AI.
+    </p>
+    <img src = "{{ url_for('static', filename = 'ship.webp') }}">
+</div>
+
+<footer>
+    <p>Copyright &copy; 2024 RefugeeGPT. Made with love in sunny San Francisco by <a href = "https://aarushgupta.com">Aarush Gupta</a>.</p>
+</footer>
+
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
+<script src = "{{ url_for('static', filename = 'chat.js') }}"></script>
+
+</body>
+</html>
